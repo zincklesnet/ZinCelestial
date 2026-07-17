@@ -1,0 +1,17 @@
+// ZinCelestial main Sass entry
+
+@import "variables";
+@import "layout";
+@import "components";
+@import "buddypress";
+@import "woocommerce";
+@import "bbpress";
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.zc-main {
+  min-height: 60vh;
+}
