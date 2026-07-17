@@ -1,0 +1,55 @@
+/*
+ * ZinCelestial — Cosmic Color Scheme
+ * Dark: Deep space purples + electric cyan
+ * Light: Soft lavender + bright cyan
+ */
+
+/* ── Dark Mode (default) ── */
+:root,
+[data-bs-theme="dark"] {
+  --zc-primary:     #7c6ff7;
+  --zc-secondary:   #22d3ee;
+  --zc-accent:      #f472b6;
+  --zc-success:     #34d399;
+  --zc-warning:     #fbbf24;
+  --zc-danger:      #f87171;
+  --zc-info:        #60a5fa;
+  --zc-bg:          #0f0f1a;
+  --zc-bg-2:        #14142b;
+  --zc-bg-card:     #1a1a2e;
+  --zc-bg-card-2:   #202040;
+  --zc-border:      rgba(124,111,247,.12);
+  --zc-border-2:    rgba(124,111,247,.22);
+  --zc-text:        #e8e8f0;
+  --zc-text-muted:  #8e8ea8;
+  --zc-text-dim:    #5c5c7a;
+  --zc-header-bg:   rgba(15,15,26,0.95);
+  --zc-footer-bg:   #0a0a14;
+  --zc-glow:        0 0 30px rgba(124,111,247,.22);
+  --bs-primary:     #7c6ff7;
+  --bs-primary-rgb: 124,111,247;
+}
+
+/* ── Light Mode ── */
+[data-bs-theme="light"] {
+  --zc-primary:     #5b4fe8;
+  --zc-secondary:   #0ea5c9;
+  --zc-accent:      #e040a0;
+  --zc-bg:          #f5f4ff;
+  --zc-bg-2:        #ededfc;
+  --zc-bg-card:     #ffffff;
+  --zc-bg-card-2:   #f9f8ff;
+  --zc-border:      rgba(91,79,232,.1);
+  --zc-border-2:    rgba(91,79,232,.18);
+  --zc-text:        #1a1a2e;
+  --zc-text-muted:  #5c5c7a;
+  --zc-text-dim:    #8e8ea8;
+  --zc-header-bg:   rgba(255,255,255,0.97);
+  --zc-footer-bg:   #14142b;
+  --zc-glow:        0 0 20px rgba(91,79,232,.15);
+  --bs-primary:     #5b4fe8;
+  --bs-primary-rgb: 91,79,232;
+}
+
+/* Scheme accent on elements */
+.zc-scheme-dot.cosmic { background: linear-gradient(135deg,#7c6ff7,#22d3ee); }

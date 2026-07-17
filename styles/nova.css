@@ -1,0 +1,37 @@
+/* ZinCelestial — Nova Scheme | Gold/Crimson */
+:root,
+[data-bs-theme="dark"] {
+  --zc-primary:     #f59e0b;
+  --zc-secondary:   #ef4444;
+  --zc-accent:      #f97316;
+  --zc-bg:          #1a1000;
+  --zc-bg-2:        #231500;
+  --zc-bg-card:     #2a1a00;
+  --zc-bg-card-2:   #331f00;
+  --zc-border:      rgba(245,158,11,.12);
+  --zc-border-2:    rgba(245,158,11,.22);
+  --zc-text:        #f5f0e0;
+  --zc-text-muted:  #a89060;
+  --zc-text-dim:    #706040;
+  --zc-header-bg:   rgba(26,16,0,0.96);
+  --zc-footer-bg:   #100a00;
+  --zc-glow:        0 0 30px rgba(245,158,11,.22);
+  --bs-primary:     #f59e0b;
+  --bs-primary-rgb: 245,158,11;
+}
+[data-bs-theme="light"] {
+  --zc-primary:     #d97706;
+  --zc-secondary:   #dc2626;
+  --zc-bg:          #fffbf0;
+  --zc-bg-2:        #fff7e0;
+  --zc-bg-card:     #ffffff;
+  --zc-bg-card-2:   #fffdf7;
+  --zc-border:      rgba(217,119,6,.1);
+  --zc-border-2:    rgba(217,119,6,.2);
+  --zc-text:        #1a1000;
+  --zc-text-muted:  #706040;
+  --zc-header-bg:   rgba(255,255,255,0.97);
+  --zc-footer-bg:   #1a1000;
+  --bs-primary:     #d97706;
+}
+.zc-scheme-dot.nova { background: linear-gradient(135deg,#f59e0b,#ef4444); }

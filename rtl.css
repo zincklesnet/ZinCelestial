@@ -1,0 +1,12 @@
+/* ZinCelestial — RTL Stylesheet */
+body { direction: rtl; unicode-bidi: embed; }
+.zc-header__inner { flex-direction: row-reverse; }
+.zc-sidebar--left { order: 2; }
+.zc-sidebar--right { order: -1; }
+.zc-menu-panel--left { left: auto; right: 0; transform: translateX(100%); }
+.zc-menu-panel--left.zc-menu-panel--open { transform: translateX(0); }
+.zc-menu-panel--right { right: auto; left: 0; transform: translateX(-100%); }
+.zc-menu-panel--right.zc-menu-panel--open { transform: translateX(0); }
+.zc-topbar__inner { flex-direction: row-reverse; }
+.zc-gamipress-bar { flex-direction: row-reverse; }
+.zc-compose-bar { flex-direction: row-reverse; }

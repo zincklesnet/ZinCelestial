@@ -1,0 +1,37 @@
+/* ZinCelestial — Aurora Scheme | Teal/Violet */
+:root,
+[data-bs-theme="dark"] {
+  --zc-primary:     #14b8a6;
+  --zc-secondary:   #8b5cf6;
+  --zc-accent:      #f59e0b;
+  --zc-bg:          #0a1628;
+  --zc-bg-2:        #0f1e38;
+  --zc-bg-card:     #132033;
+  --zc-bg-card-2:   #182840;
+  --zc-border:      rgba(20,184,166,.12);
+  --zc-border-2:    rgba(20,184,166,.22);
+  --zc-text:        #e2f0f0;
+  --zc-text-muted:  #7aa8a8;
+  --zc-text-dim:    #4a7878;
+  --zc-header-bg:   rgba(10,22,40,0.96);
+  --zc-footer-bg:   #060f1c;
+  --zc-glow:        0 0 30px rgba(20,184,166,.22);
+  --bs-primary:     #14b8a6;
+  --bs-primary-rgb: 20,184,166;
+}
+[data-bs-theme="light"] {
+  --zc-primary:     #0d9488;
+  --zc-secondary:   #7c3aed;
+  --zc-bg:          #f0fffe;
+  --zc-bg-2:        #e6fcfb;
+  --zc-bg-card:     #ffffff;
+  --zc-bg-card-2:   #f7fffe;
+  --zc-border:      rgba(13,148,136,.1);
+  --zc-border-2:    rgba(13,148,136,.2);
+  --zc-text:        #0a1628;
+  --zc-text-muted:  #4a7878;
+  --zc-header-bg:   rgba(255,255,255,0.97);
+  --zc-footer-bg:   #0a1628;
+  --bs-primary:     #0d9488;
+}
+.zc-scheme-dot.aurora { background: linear-gradient(135deg,#14b8a6,#8b5cf6); }

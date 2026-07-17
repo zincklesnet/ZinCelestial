@@ -1,0 +1,37 @@
+/* ZinCelestial — Zenith Scheme | Slate/Sky */
+:root,
+[data-bs-theme="dark"] {
+  --zc-primary:     #38bdf8;
+  --zc-secondary:   #94a3b8;
+  --zc-accent:      #6366f1;
+  --zc-bg:          #0c1220;
+  --zc-bg-2:        #111827;
+  --zc-bg-card:     #1e2433;
+  --zc-bg-card-2:   #252d40;
+  --zc-border:      rgba(56,189,248,.1);
+  --zc-border-2:    rgba(56,189,248,.2);
+  --zc-text:        #e2e8f0;
+  --zc-text-muted:  #94a3b8;
+  --zc-text-dim:    #64748b;
+  --zc-header-bg:   rgba(12,18,32,0.96);
+  --zc-footer-bg:   #060c18;
+  --zc-glow:        0 0 30px rgba(56,189,248,.18);
+  --bs-primary:     #38bdf8;
+  --bs-primary-rgb: 56,189,248;
+}
+[data-bs-theme="light"] {
+  --zc-primary:     #0284c7;
+  --zc-secondary:   #475569;
+  --zc-bg:          #f1f5f9;
+  --zc-bg-2:        #e2e8f0;
+  --zc-bg-card:     #ffffff;
+  --zc-bg-card-2:   #f8fafc;
+  --zc-border:      rgba(2,132,199,.1);
+  --zc-border-2:    rgba(2,132,199,.2);
+  --zc-text:        #0f172a;
+  --zc-text-muted:  #475569;
+  --zc-header-bg:   rgba(255,255,255,0.97);
+  --zc-footer-bg:   #0f172a;
+  --bs-primary:     #0284c7;
+}
+.zc-scheme-dot.zenith { background: linear-gradient(135deg,#38bdf8,#94a3b8); }

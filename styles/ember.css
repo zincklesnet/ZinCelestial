@@ -1,0 +1,37 @@
+/* ZinCelestial — Ember Scheme | Rose/Orange */
+:root,
+[data-bs-theme="dark"] {
+  --zc-primary:     #fb7185;
+  --zc-secondary:   #fb923c;
+  --zc-accent:      #e879f9;
+  --zc-bg:          #1a0a10;
+  --zc-bg-2:        #240e16;
+  --zc-bg-card:     #2c1020;
+  --zc-bg-card-2:   #381427;
+  --zc-border:      rgba(251,113,133,.12);
+  --zc-border-2:    rgba(251,113,133,.22);
+  --zc-text:        #ffe8ec;
+  --zc-text-muted:  #c07080;
+  --zc-text-dim:    #804050;
+  --zc-header-bg:   rgba(26,10,16,0.96);
+  --zc-footer-bg:   #100508;
+  --zc-glow:        0 0 30px rgba(251,113,133,.22);
+  --bs-primary:     #fb7185;
+  --bs-primary-rgb: 251,113,133;
+}
+[data-bs-theme="light"] {
+  --zc-primary:     #e11d48;
+  --zc-secondary:   #ea580c;
+  --zc-bg:          #fff1f4;
+  --zc-bg-2:        #ffe4ea;
+  --zc-bg-card:     #ffffff;
+  --zc-bg-card-2:   #fff8fa;
+  --zc-border:      rgba(225,29,72,.1);
+  --zc-border-2:    rgba(225,29,72,.2);
+  --zc-text:        #1a0a10;
+  --zc-text-muted:  #804050;
+  --zc-header-bg:   rgba(255,255,255,0.97);
+  --zc-footer-bg:   #1a0a10;
+  --bs-primary:     #e11d48;
+}
+.zc-scheme-dot.ember { background: linear-gradient(135deg,#fb7185,#fb923c); }
