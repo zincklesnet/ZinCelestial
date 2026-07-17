@@ -1,8 +1,19 @@
 /*
 Theme Name: ZinCelestial
 Theme URI: https://zinckles.com
-Author: Zinckles
-Description: Modern Bootstrap-based WordPress + BuddyPress + WooCommerce + bbPress theme.
+Author: Zabrina
+Author URI: https://zinckles.com
+Description: A modern, Bootstrap‑powered WordPress theme with strict BuddyPress, WooCommerce, and bbPress compatibility. Enhanced with AJAX, microinteractions, and a clean Sass/JS pipeline.
 Version: 5.2.0
 Text Domain: zincelestial
+Requires at least: 6.0
+Requires PHP: 7.4
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* 
+ZinCelestial Core Stylesheet
+This file only contains metadata + minimal fallback styles.
+All real styling is compiled from /assets/src/scss into /assets/dist/css/main.css.
 */
