@@ -1,0 +1,16 @@
+/* ZinCelestial — Block Editor Styles */
+.wp-block-group{margin-block:var(--zc-space-6)}
+.wp-block-columns{gap:var(--zc-space-6)}
+.wp-block-quote{border-left:4px solid var(--zc-primary);padding-left:var(--zc-space-5);font-style:italic;color:var(--zc-text-muted);margin:var(--zc-space-6) 0}
+.wp-block-pullquote{border-top:3px solid var(--zc-primary);border-bottom:3px solid var(--zc-primary);text-align:center;padding:var(--zc-space-6);margin:var(--zc-space-8) 0}
+.wp-block-pullquote blockquote{margin:0;font-size:var(--zc-fs-xl);font-family:var(--zc-font-display);color:var(--zc-text)}
+.wp-block-code,.wp-block-preformatted{background:var(--zc-surface);border:1px solid var(--zc-border);border-radius:var(--zc-radius-md);padding:var(--zc-space-5);font-family:var(--zc-font-mono);font-size:var(--zc-fs-sm);color:var(--zc-text);overflow-x:auto}
+.wp-block-table table{width:100%;border-collapse:collapse;background:var(--zc-card);border-radius:var(--zc-radius-md);overflow:hidden;border:1px solid var(--zc-border)}
+.wp-block-table th,.wp-block-table td{padding:var(--zc-space-3) var(--zc-space-5);border-bottom:1px solid var(--zc-border);text-align:left}
+.wp-block-table th{background:var(--zc-surface);font-weight:600;color:var(--zc-text-muted);font-size:var(--zc-fs-xs);text-transform:uppercase;letter-spacing:.06em}
+.wp-block-table tr:hover td{background:rgba(124,111,247,.03)}
+.wp-block-separator{border:none;border-top:1px solid var(--zc-border);margin:var(--zc-space-8) 0}
+.wp-block-button__link{background:var(--zc-gradient-primary)!important;border-radius:var(--zc-radius-md)!important;font-weight:600!important;transition:all var(--zc-transition-fast)!important}
+.wp-block-button__link:hover{transform:translateY(-2px)!important;box-shadow:0 4px 16px rgba(124,111,247,.4)!important}
+.wp-block-cover{border-radius:var(--zc-radius-lg);overflow:hidden}
+.wp-block-image img{border-radius:var(--zc-radius-md)}

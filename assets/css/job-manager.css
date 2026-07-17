@@ -1,0 +1,44 @@
+/**
+ * ZinCelestial v3.0 — WP Job Manager Styles
+ */
+
+/* ─── JOB LISTINGS ─── */
+.job_listings { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .75rem; }
+.job_listing { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; transition: transform var(--zc-transition), box-shadow var(--zc-transition); }
+.job_listing:hover { transform: translateY(-2px); box-shadow: var(--zc-shadow-md); }
+.job_listing .company-logo { width: 56px; height: 56px; border-radius: var(--zc-radius-md); border: 1px solid var(--zc-border); object-fit: contain; background: var(--zc-bg-secondary); flex-shrink: 0; padding: 4px; }
+.job_listing .position { flex: 1; min-width: 0; }
+.job_listing .position h3 { font-size: 1rem; font-weight: 700; color: var(--zc-text-strong); margin: 0 0 .25rem; }
+.job_listing .position h3 a { color: inherit; text-decoration: none; transition: color var(--zc-transition); }
+.job_listing .position h3 a:hover { color: var(--zc-primary); }
+.job_listing .company { font-size: .82rem; color: var(--zc-text-muted); display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+
+/* ─── JOB TYPE BADGES ─── */
+.job-type, .jm-job-type { display: inline-flex; align-items: center; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; padding: .15rem .55rem; border-radius: var(--zc-radius-pill); }
+.job-type.full-time { background: #d1fae5; color: #065f46; }
+.job-type.part-time { background: #fef3c7; color: #92400e; }
+.job-type.freelance { background: #ede9fe; color: #5b21b6; }
+.job-type.contract { background: #fee2e2; color: #991b1b; }
+.job-type.temporary { background: #dbeafe; color: #1e40af; }
+.job-type.internship { background: #f3e8ff; color: #6b21a8; }
+
+/* ─── META ─── */
+.job_listing .meta { display: flex; flex-direction: column; align-items: flex-end; gap: .3rem; flex-shrink: 0; }
+.job_listing .date-posted { font-size: .72rem; color: var(--zc-text-muted); }
+.job_listing .location { font-size: .78rem; color: var(--zc-text-muted); display: flex; align-items: center; gap: .25rem; }
+
+/* ─── FILTERS BAR ─── */
+.job-filters { background: var(--zc-bg-secondary); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; }
+.job-filters input, .job-filters select { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-md); padding: .5rem .85rem; color: var(--zc-text); font-size: .85rem; outline: none; flex: 1; min-width: 140px; }
+.job-filters input:focus, .job-filters select:focus { border-color: var(--zc-primary); }
+.job-filters button { background: var(--zc-gradient); color: #fff; border: none; border-radius: var(--zc-radius-pill); padding: .55rem 1.4rem; font-weight: 700; cursor: pointer; white-space: nowrap; }
+
+/* ─── SINGLE JOB ─── */
+.single_job_listing { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-xl); overflow: hidden; }
+.job-header { background: var(--zc-bg-secondary); padding: 2rem; display: flex; gap: 1.5rem; align-items: flex-start; }
+.job-header .company-logo { width: 80px; height: 80px; border-radius: var(--zc-radius-lg); border: 1px solid var(--zc-border); object-fit: contain; background: var(--zc-bg-card); padding: 8px; }
+.job-header h1 { font-size: 1.6rem; font-weight: 800; color: var(--zc-text-strong); margin: 0 0 .4rem; }
+.job-meta-strip { display: flex; gap: 1rem; flex-wrap: wrap; font-size: .82rem; color: var(--zc-text-muted); margin-top: .4rem; }
+.job-content { padding: 2rem; }
+.job-apply-btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--zc-gradient); color: #fff; border-radius: var(--zc-radius-pill); padding: .7rem 1.75rem; font-weight: 700; font-size: .95rem; text-decoration: none; transition: opacity var(--zc-transition); }
+.job-apply-btn:hover { opacity: .85; color: #fff; }

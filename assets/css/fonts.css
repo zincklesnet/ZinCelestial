@@ -1,0 +1,18 @@
+/* ZinCelestial — Font utilities */
+.zc-font-body{font-family:var(--zc-font-body)}
+.zc-font-display{font-family:var(--zc-font-display)}
+.zc-font-mono{font-family:var(--zc-font-mono)}
+.zc-text-gradient{background:var(--zc-gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.zc-text-xs{font-size:var(--zc-fs-xs)}
+.zc-text-sm{font-size:var(--zc-fs-sm)}
+.zc-text-md{font-size:var(--zc-fs-md)}
+.zc-text-lg{font-size:var(--zc-fs-lg)}
+.zc-text-xl{font-size:var(--zc-fs-xl)}
+.zc-text-2xl{font-size:var(--zc-fs-2xl)}
+.zc-text-muted{color:var(--zc-text-muted)}
+.zc-text-faint{color:var(--zc-text-faint)}
+.zc-text-primary{color:var(--zc-primary)}
+.zc-fw-400{font-weight:400}
+.zc-fw-600{font-weight:600}
+.zc-fw-700{font-weight:700}
+.zc-fw-900{font-weight:900}

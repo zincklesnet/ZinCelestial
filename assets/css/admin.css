@@ -1,0 +1,90 @@
+/**
+ * ZinCelestial v3.0 — WordPress Admin Overrides
+ * Applied when ZinCelestial is active — subtle WP admin harmonization
+ */
+
+/* ─── ADMIN BAR ─── */
+#wpadminbar { background: #0a0a18 !important; border-bottom: 1px solid #1e1e3a; }
+#wpadminbar .ab-item, #wpadminbar a.ab-item, #wpadminbar .ab-label { color: #94a3b8 !important; }
+#wpadminbar .ab-item:hover, #wpadminbar a.ab-item:hover, #wpadminbar .ab-top-menu > li:hover > .ab-item { color: #a78bfa !important; background: transparent !important; }
+#wpadminbar #wp-admin-bar-site-name > .ab-item::before { display: none; }
+#wpadminbar #wp-admin-bar-zincelestial .ab-item { color: #7c6ff7 !important; font-weight: 700; }
+#wpadminbar #wp-admin-bar-zincelestial:hover .ab-item { color: #a78bfa !important; }
+
+/* ─── THEME NOTICE (admin notices) ─── */
+.zc-admin-notice { display: flex; align-items: center; gap: .85rem; background: linear-gradient(135deg,rgba(124,111,247,.1),rgba(0,212,255,.1)); border-left: 4px solid #7c6ff7; border-radius: 0 8px 8px 0; padding: .85rem 1.25rem; margin: 1rem 0; }
+.zc-admin-notice .zc-notice-icon { font-size: 1.4rem; }
+.zc-admin-notice p { margin: 0; color: #1a1a2e; }
+.zc-admin-notice strong { color: #7c6ff7; }
+
+/* ─── ADMIN VIEW BASE LAYOUT ─── */
+.wrap .zc-view { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; max-width: 100%; }
+
+/* ─── ZC VIEW HEADER ─── */
+.zc-view-header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #e2e8f0; }
+.zc-view-header-icon { width: 52px; height: 52px; background: linear-gradient(135deg,#7c6ff7,#00d4ff); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; flex-shrink: 0; box-shadow: 0 4px 16px rgba(124,111,247,.3); }
+.zc-view-header-icon .dashicons { font-size: 1.5rem; width: 1.5rem; height: 1.5rem; line-height: 1; }
+.zc-view-title { font-size: 1.6rem; font-weight: 800; color: #1a1a2e; margin: 0 0 .2rem; line-height: 1.2; }
+.zc-view-sub { font-size: .85rem; color: #64748b; margin: 0; }
+
+/* ─── TABS BAR ─── */
+.zc-tabs-bar { display: flex; gap: 0; border-bottom: 2px solid #e2e8f0; margin-bottom: 1.75rem; overflow-x: auto; flex-wrap: nowrap; }
+.zc-tab { background: transparent; border: none; border-bottom: 2px solid transparent; padding: .75rem 1.2rem; font-size: .85rem; font-weight: 600; color: #64748b; cursor: pointer; white-space: nowrap; margin-bottom: -2px; transition: all .15s ease; font-family: inherit; }
+.zc-tab:hover { color: #7c6ff7; }
+.zc-tab.active { color: #7c6ff7; border-bottom-color: #7c6ff7; }
+
+/* ─── TAB PANELS ─── */
+.zc-tab-panel { display: none; }
+.zc-tab-panel.active { display: block; }
+
+/* ─── SECTION CARDS ─── */
+.zc-section-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.75rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+.zc-section-title { display: flex; align-items: center; gap: .6rem; font-size: 1rem; font-weight: 700; color: #1a1a2e; margin: 0 0 1.25rem; padding-bottom: .75rem; border-bottom: 1px solid #f1f5f9; }
+.zc-section-title .dashicons { color: #7c6ff7; font-size: 1.1rem; }
+
+/* ─── FIELDS GRID ─── */
+.zc-fields-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; }
+.zc-field { display: flex; flex-direction: column; gap: .4rem; }
+.zc-field-full { grid-column: span 2; flex-direction: row; align-items: center; justify-content: space-between; }
+.zc-field label:first-child { font-size: .83rem; font-weight: 600; color: #374151; }
+.zc-help { font-size: .75rem; color: #94a3b8; margin: .15rem 0 0; line-height: 1.4; }
+
+/* ─── INPUTS ─── */
+.zc-input, .zc-code { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: .6rem .9rem; font-size: .88rem; color: #1a1a2e; width: 100%; transition: border-color .15s; font-family: inherit; outline: none; }
+.zc-input:focus { border-color: #7c6ff7; box-shadow: 0 0 0 3px rgba(124,111,247,.12); }
+.zc-code { font-family: 'Courier New', monospace; background: #0f0f1f; color: #e2e8f0; border-color: #1e1e3a; }
+select.zc-input, select.zc-auto-save { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: .55rem .85rem; font-size: .85rem; color: #1a1a2e; width: 100%; outline: none; cursor: pointer; }
+
+/* ─── TOGGLE SWITCH ─── */
+.zc-toggle { display: inline-flex; position: relative; width: 44px; height: 24px; flex-shrink: 0; }
+.zc-toggle input { opacity: 0; width: 0; height: 0; }
+.zc-toggle span { position: absolute; inset: 0; background: #cbd5e1; border-radius: 9999px; cursor: pointer; transition: background .2s; }
+.zc-toggle span::after { content: ''; position: absolute; left: 3px; top: 3px; width: 18px; height: 18px; background: #fff; border-radius: 50%; transition: transform .2s; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+.zc-toggle input:checked + span { background: #7c6ff7; }
+.zc-toggle input:checked + span::after { transform: translateX(20px); }
+.zc-toggle input:disabled + span { opacity: .45; cursor: not-allowed; }
+
+/* ─── COLOR PICKER ─── */
+input.zc-color-picker { width: 44px; height: 36px; padding: 2px; border-radius: 8px; border: 1px solid #e2e8f0; cursor: pointer; background: #fff; }
+
+/* ─── SLIDER ─── */
+.zc-slider-wrap { display: flex; align-items: center; gap: .75rem; }
+input.zc-slider { flex: 1; accent-color: #7c6ff7; height: 4px; }
+.zc-slider-val { font-size: .78rem; font-weight: 700; color: #7c6ff7; min-width: 44px; text-align: right; }
+
+/* ─── NOTICE ─── */
+.zc-notice { display: flex; align-items: center; gap: .75rem; padding: .85rem 1.1rem; border-radius: 10px; margin-bottom: 1.25rem; font-size: .85rem; }
+.zc-notice-warning { background: #fefce8; border: 1px solid #fde68a; color: #854d0e; }
+.zc-notice-error { background: #fff1f1; border: 1px solid #fca5a5; color: #991b1b; }
+.zc-notice-success { background: #f0fdf4; border: 1px solid #86efac; color: #166534; }
+.zc-notice .dashicons { font-size: 1.1rem; }
+
+/* ─── SAVE STATUS ─── */
+#zc-autosave-status { position: fixed; bottom: 1.5rem; right: 1.5rem; background: #7c6ff7; color: #fff; border-radius: 9999px; padding: .5rem 1.25rem; font-size: .82rem; font-weight: 600; display: none; z-index: 9999; box-shadow: 0 4px 16px rgba(124,111,247,.4); animation: zc-fadein .2s ease; }
+@keyframes zc-fadein { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+/* ─── RESPONSIVE ADMIN ─── */
+@media (max-width: 900px) {
+  .zc-fields-grid { grid-template-columns: 1fr; }
+  .zc-field-full { flex-direction: column; align-items: flex-start; }
+}

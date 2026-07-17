@@ -1,0 +1,251 @@
+/**
+ * ZinCelestial — Custom Login Page Styles
+ * Loaded by inc/login.php on wp-login.php
+ *
+ * @package ZinCelestial
+ * @since   3.0.0
+ */
+
+/* ── Root tokens ─────────────────────────────────── */
+:root {
+    --zc-login-bg:         #07070f;
+    --zc-login-card-bg:    #0f0f1f;
+    --zc-login-border:     #1e1e3a;
+    --zc-login-primary:    #7c6ff7;
+    --zc-login-accent:     #00d4ff;
+    --zc-login-text:       #e2e8f0;
+    --zc-login-muted:      #64748b;
+    --zc-login-input-bg:   #0a0a1a;
+    --zc-login-radius:     14px;
+    --zc-login-gradient:   linear-gradient(135deg, #7c6ff7 0%, #00d4ff 100%);
+    --zc-login-shadow:     0 8px 40px rgba(124, 111, 247, 0.25);
+}
+
+/* ── Body / background ───────────────────────────── */
+body,
+body.login {
+    background-color: var(--zc-login-bg);
+    background-image:
+        radial-gradient(ellipse at 20% 20%, rgba(124, 111, 247, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(0, 212, 255, 0.12) 0%, transparent 55%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    color: var(--zc-login-text);
+}
+
+/* ── Logo area ───────────────────────────────────── */
+body.login #login h1 a,
+body.login .login-logo a {
+    background-image: none;
+    width: auto;
+    height: auto;
+    padding-bottom: 0;
+    text-indent: 0;
+    font-size: 1.6rem;
+    font-weight: 900;
+    background: var(--zc-login-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-bottom: .5rem;
+    text-decoration: none;
+}
+
+body.login #login h1 {
+    text-align: center;
+}
+
+/* ── Login card ──────────────────────────────────── */
+body.login #loginform,
+body.login #registerform,
+body.login #lostpasswordform,
+body.login #resetpassform {
+    background: var(--zc-login-card-bg);
+    border: 1px solid var(--zc-login-border);
+    border-radius: var(--zc-login-radius);
+    padding: 2rem;
+    box-shadow: var(--zc-login-shadow);
+    margin-top: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+body.login #loginform:focus-within {
+    box-shadow: 0 8px 50px rgba(124, 111, 247, 0.4);
+}
+
+/* ── Labels ──────────────────────────────────────── */
+body.login .login-form label,
+body.login #loginform label,
+body.login #registerform label {
+    color: var(--zc-login-muted);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+}
+
+/* ── Inputs ──────────────────────────────────────── */
+body.login input[type="text"],
+body.login input[type="password"],
+body.login input[type="email"],
+body.login input[type="url"],
+body.login input[type="search"] {
+    background: var(--zc-login-input-bg);
+    border: 1.5px solid var(--zc-login-border);
+    border-radius: 8px;
+    color: var(--zc-login-text);
+    padding: .65rem .9rem;
+    font-size: .9rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+body.login input[type="text"]:focus,
+body.login input[type="password"]:focus,
+body.login input[type="email"]:focus {
+    border-color: var(--zc-login-primary);
+    box-shadow: 0 0 0 3px rgba(124, 111, 247, 0.2);
+}
+
+/* ── Submit button ───────────────────────────────── */
+body.login #wp-submit,
+body.login .button-primary,
+body.login input[type="submit"] {
+    background: var(--zc-login-gradient);
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .75rem 2rem;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+    box-shadow: 0 4px 20px rgba(124, 111, 247, 0.4);
+    letter-spacing: 0.3px;
+    -webkit-text-fill-color: #fff;
+}
+
+body.login #wp-submit:hover,
+body.login input[type="submit"]:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+body.login #wp-submit:active,
+body.login input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ── Remember me checkbox ────────────────────────── */
+body.login .login-remember label {
+    color: var(--zc-login-muted);
+    font-size: .82rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+body.login input[type="checkbox"] {
+    accent-color: var(--zc-login-primary);
+}
+
+/* ── Links below form ────────────────────────────── */
+body.login #nav a,
+body.login #backtoblog a,
+body.login .privacy-policy-page-link a {
+    color: var(--zc-login-primary);
+    text-decoration: none;
+    font-size: .82rem;
+    transition: color 0.15s;
+}
+
+body.login #nav a:hover,
+body.login #backtoblog a:hover {
+    color: var(--zc-login-accent);
+    text-decoration: underline;
+}
+
+body.login #nav,
+body.login #backtoblog {
+    text-align: center;
+    padding: .5rem 0;
+}
+
+/* ── Error / notice messages ─────────────────────── */
+body.login #login_error,
+body.login .message,
+body.login .success {
+    background: var(--zc-login-card-bg);
+    border-left: 4px solid var(--zc-login-primary);
+    border-radius: 0 8px 8px 0;
+    color: var(--zc-login-text);
+    font-size: .85rem;
+    padding: .75rem 1rem;
+    margin-bottom: 1rem;
+}
+
+body.login #login_error {
+    border-left-color: #ff5370;
+}
+
+body.login .success {
+    border-left-color: #2ed8b6;
+}
+
+/* ── Age gate card ───────────────────────────────── */
+.zc-age-gate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--zc-login-bg);
+    padding: 2rem;
+}
+
+.zc-age-gate__card {
+    background: var(--zc-login-card-bg);
+    border: 1px solid var(--zc-login-border);
+    border-radius: var(--zc-login-radius);
+    padding: 3rem 2.5rem;
+    text-align: center;
+    max-width: 440px;
+    width: 100%;
+    box-shadow: var(--zc-login-shadow);
+}
+
+.zc-age-gate__card h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    background: var(--zc-login-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.zc-age-gate__card p {
+    color: var(--zc-login-muted);
+    margin-bottom: 2rem;
+    font-size: .95rem;
+}
+
+/* ── Two-column login layout (wider viewports) ───── */
+@media (min-width: 640px) {
+    body.login #login {
+        width: 380px;
+    }
+}
+
+/* ── Dark scrollbar ──────────────────────────────── */
+body.login {
+    scrollbar-width: thin;
+    scrollbar-color: var(--zc-login-primary) var(--zc-login-bg);
+}
+
+body.login::-webkit-scrollbar { width: 6px; }
+body.login::-webkit-scrollbar-thumb { background: var(--zc-login-primary); border-radius: 3px; }

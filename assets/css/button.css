@@ -1,0 +1,139 @@
+/**
+ * ZinCelestial v3.0 — Button Component System
+ */
+
+/* ─── BASE BUTTON ─── */
+.zc-btn, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  border: none;
+  border-radius: var(--zc-radius-pill);
+  font-family: var(--zc-font-body);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity .2s, transform .15s, box-shadow .2s, background .2s;
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+.zc-btn:focus-visible { outline: 2px solid var(--zc-primary); outline-offset: 2px; }
+.zc-btn:disabled, .zc-btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+.zc-btn:active { transform: scale(.97); }
+
+/* ─── SIZES ─── */
+.zc-btn-xs { font-size: .72rem; padding: .3rem .75rem; gap: .3rem; }
+.zc-btn-sm, .btn-sm { font-size: .8rem; padding: .45rem 1rem; }
+.zc-btn-md, .btn-md, .zc-btn { font-size: .88rem; padding: .6rem 1.4rem; }
+.zc-btn-lg, .btn-lg { font-size: .95rem; padding: .75rem 1.8rem; }
+.zc-btn-xl { font-size: 1rem; padding: .9rem 2.25rem; }
+.zc-btn-icon { padding: .6rem; border-radius: 50%; width: 38px; height: 38px; }
+.zc-btn-icon.zc-btn-sm { width: 32px; height: 32px; padding: .4rem; }
+.zc-btn-icon.zc-btn-lg { width: 46px; height: 46px; padding: .8rem; }
+
+/* ─── PRIMARY ─── */
+.zc-btn-primary {
+  background: linear-gradient(135deg, var(--zc-primary, #7c6ff7), var(--zc-secondary, #00d4ff));
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(124,111,247,.35);
+}
+.zc-btn-primary:hover { opacity: .88; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(124,111,247,.45); color: #fff; }
+
+/* ─── SECONDARY ─── */
+.zc-btn-secondary {
+  background: var(--zc-bg-secondary, #0f0f1f);
+  color: var(--zc-text, #e2e8f0);
+  border: 1px solid var(--zc-border, #1e1e3a);
+}
+.zc-btn-secondary:hover { background: var(--zc-bg-card, #111128); border-color: var(--zc-primary); color: var(--zc-primary); }
+
+/* ─── OUTLINE ─── */
+.zc-btn-outline {
+  background: transparent;
+  color: var(--zc-primary);
+  border: 2px solid var(--zc-primary);
+}
+.zc-btn-outline:hover { background: var(--zc-primary); color: #fff; }
+
+/* ─── GHOST ─── */
+.zc-btn-ghost {
+  background: transparent;
+  color: var(--zc-text-muted, #64748b);
+  border: 1px solid transparent;
+}
+.zc-btn-ghost:hover { background: var(--zc-bg-secondary); color: var(--zc-text); border-color: var(--zc-border); }
+
+/* ─── SEMANTIC ─── */
+.zc-btn-success { background: #10b981; color: #fff; box-shadow: 0 4px 14px rgba(16,185,129,.3); }
+.zc-btn-success:hover { opacity: .85; color: #fff; }
+.zc-btn-warning { background: #f59e0b; color: #fff; box-shadow: 0 4px 14px rgba(245,158,11,.3); }
+.zc-btn-warning:hover { opacity: .85; color: #fff; }
+.zc-btn-danger, .zc-btn-error { background: #ef4444; color: #fff; box-shadow: 0 4px 14px rgba(239,68,68,.3); }
+.zc-btn-danger:hover { opacity: .85; color: #fff; }
+.zc-btn-info { background: #0ea5e9; color: #fff; box-shadow: 0 4px 14px rgba(14,165,233,.3); }
+.zc-btn-info:hover { opacity: .85; color: #fff; }
+
+/* ─── GLASS / FROSTED ─── */
+.zc-btn-glass {
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.15);
+}
+.zc-btn-glass:hover { background: rgba(255,255,255,.16); color: #fff; }
+
+/* ─── LOADING STATE ─── */
+.zc-btn.loading { pointer-events: none; }
+.zc-btn.loading::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: zc-spin .6s linear infinite;
+  margin-left: .35rem;
+}
+@keyframes zc-spin { to { transform: rotate(360deg); } }
+
+/* ─── BUTTON GROUP ─── */
+.zc-btn-group { display: inline-flex; }
+.zc-btn-group .zc-btn { border-radius: 0; border-right-width: 0; }
+.zc-btn-group .zc-btn:first-child { border-radius: var(--zc-radius-pill) 0 0 var(--zc-radius-pill); }
+.zc-btn-group .zc-btn:last-child { border-radius: 0 var(--zc-radius-pill) var(--zc-radius-pill) 0; border-right-width: 1px; }
+
+/* ─── LINK BUTTON ─── */
+.zc-btn-link { background: transparent; color: var(--zc-primary); padding: 0; border-radius: 0; text-decoration: underline; text-underline-offset: 2px; }
+.zc-btn-link:hover { color: var(--zc-accent); }
+
+/* ─── TOOLTIP on BUTTONS ─── */
+[data-tip] { position: relative; }
+[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) scale(.95);
+  background: #1a1a2e;
+  color: #e2e8f0;
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .3rem .65rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .15s, transform .15s;
+  z-index: 1000;
+}
+[data-tip]:hover::after { opacity: 1; transform: translateX(-50%) scale(1); }
+
+/* ─── WP BUTTON HARMONIZATION ─── */
+.button.button-primary { border-radius: var(--zc-radius-pill) !important; background: linear-gradient(135deg,#7c6ff7,#00d4ff) !important; border-color: transparent !important; color: #fff !important; font-weight: 700 !important; }
+.button.button-primary:hover { opacity: .85 !important; }
+.button.button-secondary { border-radius: var(--zc-radius-pill) !important; }

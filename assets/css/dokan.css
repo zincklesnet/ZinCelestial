@@ -1,0 +1,47 @@
+/**
+ * ZinCelestial v3.0 — Dokan Marketplace Styles
+ */
+
+/* ─── STORE HEADER ─── */
+.dokan-store-wrap .dokan-store-header { position: relative; margin-bottom: 0; }
+.dokan-store-wrap .dokan-store-header .dokan-banner { width: 100%; height: 280px; object-fit: cover; border-radius: var(--zc-radius-xl) var(--zc-radius-xl) 0 0; overflow: hidden; background: var(--zc-bg-secondary); }
+.dokan-store-wrap .dokan-store-header img { width: 100%; height: 100%; object-fit: cover; }
+.dokan-store-avatar img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--zc-primary); object-fit: cover; position: absolute; bottom: -40px; left: 2rem; box-shadow: var(--zc-shadow-md); }
+
+/* ─── STORE INFO BAR ─── */
+.dokan-info-box { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: 0 0 var(--zc-radius-xl) var(--zc-radius-xl); padding: 1.25rem 1.5rem 1.25rem 9rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.dokan-store-name h2 { font-size: 1.35rem; font-weight: 800; color: var(--zc-text-strong); margin: 0; }
+.dokan-store-meta { font-size: .78rem; color: var(--zc-text-muted); display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; margin-top: .3rem; }
+.dokan-rating { display: inline-flex; align-items: center; gap: .25rem; color: #f59e0b; font-size: .8rem; font-weight: 600; }
+.dokan-verified-badge { display: inline-flex; align-items: center; gap: .2rem; font-size: .72rem; background: #d1fae5; color: #065f46; padding: .15rem .5rem; border-radius: var(--zc-radius-pill); font-weight: 700; }
+
+/* ─── STORE TABS ─── */
+.dokan-store-tabs { background: var(--zc-bg-secondary); border-bottom: 1px solid var(--zc-border); }
+.dokan-store-tabs ul.dokan-tab { display: flex; list-style: none; margin: 0; padding: 0; gap: 0; overflow-x: auto; }
+.dokan-store-tabs ul.dokan-tab li a { display: block; padding: .85rem 1.25rem; font-size: .85rem; font-weight: 600; color: var(--zc-text-muted); text-decoration: none; border-bottom: 2px solid transparent; transition: all var(--zc-transition); white-space: nowrap; }
+.dokan-store-tabs ul.dokan-tab li a:hover { color: var(--zc-primary); }
+.dokan-store-tabs ul.dokan-tab li.active a { color: var(--zc-primary); border-bottom-color: var(--zc-primary); }
+
+/* ─── PRODUCT GRID ─── */
+.dokan-product-listing { padding: 1.5rem 0; }
+.dokan-product-list-area .list-inline li { padding: 0; }
+
+/* ─── VENDOR BADGE ─── */
+.zc-vendor-badge { display: inline-flex; align-items: center; gap: .3rem; font-size: .68rem; background: linear-gradient(135deg,var(--zc-primary),var(--zc-secondary)); color: #fff; padding: .15rem .55rem; border-radius: var(--zc-radius-pill); font-weight: 700; }
+
+/* ─── STORE SIDEBAR ─── */
+.dokan-store-sidebar .widget { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: 1.25rem; margin-bottom: 1rem; }
+.dokan-store-sidebar .widget-title { font-size: .82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--zc-text-muted); font-weight: 700; margin-bottom: .75rem; padding-bottom: .5rem; border-bottom: 1px solid var(--zc-border); }
+
+/* ─── SELLER CONTACT FORM ─── */
+.dokan-contact-seller-wrap { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: 1.25rem; }
+.dokan-contact-seller-wrap input, .dokan-contact-seller-wrap textarea { width: 100%; background: var(--zc-bg-secondary); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-md); padding: .6rem .85rem; color: var(--zc-text); font-size: .88rem; margin-bottom: .75rem; outline: none; }
+.dokan-contact-seller-wrap input:focus, .dokan-contact-seller-wrap textarea:focus { border-color: var(--zc-primary); }
+.dokan-contact-seller-wrap .dokan-btn { background: var(--zc-gradient); color: #fff; border: none; border-radius: var(--zc-radius-pill); padding: .65rem 1.5rem; font-weight: 700; cursor: pointer; }
+
+/* ─── BECOME VENDOR CTA ─── */
+.dokan-become-vendor { background: var(--zc-gradient); border-radius: var(--zc-radius-xl); padding: 2rem; text-align: center; color: #fff; margin: 2rem 0; }
+.dokan-become-vendor h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: .5rem; }
+.dokan-become-vendor p { opacity: .85; margin-bottom: 1.25rem; }
+.dokan-become-vendor a { background: rgba(255,255,255,.2); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.3); color: #fff; border-radius: var(--zc-radius-pill); padding: .7rem 2rem; font-weight: 700; text-decoration: none; transition: background var(--zc-transition); }
+.dokan-become-vendor a:hover { background: rgba(255,255,255,.35); }

@@ -1,0 +1,22 @@
+/* ZinCelestial — Compose Bar (Boombox-inspired) */
+.zc-compose-bar{background:var(--zc-card);border-bottom:1px solid var(--zc-border);padding:var(--zc-space-3) var(--zc-space-6);position:sticky;top:var(--zc-header-h);z-index:80;transition:top var(--zc-transition-base)}
+.zc-compose-bar__inner{max-width:700px;margin:0 auto;display:flex;align-items:center;gap:var(--zc-space-3)}
+.zc-compose-bar__avatar{width:40px;height:40px;border-radius:var(--zc-radius-full);overflow:hidden;flex-shrink:0}
+.zc-compose-bar__avatar img{width:100%;height:100%;object-fit:cover}
+.zc-compose-bar__trigger{flex:1;display:flex;align-items:center;gap:var(--zc-space-3);padding:var(--zc-space-3) var(--zc-space-5);background:var(--zc-surface);border:1px solid var(--zc-border);border-radius:var(--zc-radius-full);cursor:pointer;color:var(--zc-text-muted);font-size:var(--zc-fs-sm);transition:all var(--zc-transition-fast)}
+.zc-compose-bar__trigger:hover{border-color:var(--zc-primary);background:rgba(124,111,247,.05);color:var(--zc-text)}
+.zc-compose-bar__actions{display:flex;gap:var(--zc-space-2)}
+.zc-compose-bar__action-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:var(--zc-radius-full);color:var(--zc-text-muted);border:1px solid var(--zc-border);background:var(--zc-surface);transition:all var(--zc-transition-fast);font-size:1.1rem}
+.zc-compose-bar__action-btn:hover{color:var(--zc-primary);border-color:var(--zc-primary);background:rgba(124,111,247,.1);transform:scale(1.1)}
+/* Compose Modal */
+.zc-compose-modal{max-width:640px}
+.zc-compose-modal__editor{min-height:120px;background:var(--zc-surface);border:1px solid var(--zc-border);border-radius:var(--zc-radius-md);padding:var(--zc-space-4);color:var(--zc-text);outline:none;font-size:var(--zc-fs-md);line-height:1.7;resize:none;width:100%}
+.zc-compose-modal__editor:focus{border-color:var(--zc-primary)}
+.zc-compose-modal__editor[placeholder]:empty::before{content:attr(placeholder);color:var(--zc-text-faint)}
+.zc-compose-modal__toolbar{display:flex;align-items:center;justify-content:space-between;padding-top:var(--zc-space-3);border-top:1px solid var(--zc-border);margin-top:var(--zc-space-3)}
+.zc-compose-modal__media-btns{display:flex;gap:var(--zc-space-2)}
+.zc-compose-modal__media-btn{display:flex;align-items:center;gap:var(--zc-space-1);padding:.3em .8em;border-radius:var(--zc-radius-full);font-size:var(--zc-fs-xs);font-weight:600;color:var(--zc-text-muted);border:1px solid var(--zc-border);background:var(--zc-surface);cursor:pointer;transition:all var(--zc-transition-fast)}
+.zc-compose-modal__media-btn:hover{color:var(--zc-primary);border-color:var(--zc-primary)}
+.zc-compose-modal__submit{padding:.6em 1.6em;background:var(--zc-gradient-primary);color:#fff;border:none;border-radius:var(--zc-radius-full);font-weight:700;cursor:pointer;transition:all var(--zc-transition-fast);font-size:var(--zc-fs-sm)}
+.zc-compose-modal__submit:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(124,111,247,.4)}
+.zc-compose-modal__submit:disabled{opacity:.5;cursor:not-allowed;transform:none}

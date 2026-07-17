@@ -1,0 +1,71 @@
+/**
+ * ZinCelestial v3.0 — BuddyBoss Platform (bb-buddypress) Styles
+ * Fallback/compatibility layer for BuddyBoss templates
+ */
+
+/* ─── BB ACTIVITY ─── */
+.bb-activity-media-wrap { border-radius: var(--zc-radius-lg); overflow: hidden; margin-top: .75rem; }
+.bb-activity-media-wrap img { width: 100%; max-height: 480px; object-fit: cover; }
+.bb-gif-wrap { border-radius: var(--zc-radius-lg); overflow: hidden; }
+.bb-link-preview { background: var(--zc-bg-secondary); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); overflow: hidden; margin-top: .75rem; display: flex; gap: 1rem; }
+.bb-link-preview-image { width: 120px; flex-shrink: 0; }
+.bb-link-preview-image img { width: 100%; height: 100%; object-fit: cover; }
+.bb-link-preview-content { padding: .85rem; flex: 1; }
+.bb-link-preview-title { font-weight: 700; font-size: .88rem; color: var(--zc-text-strong); margin-bottom: .25rem; }
+.bb-link-preview-description { font-size: .78rem; color: var(--zc-text-muted); }
+.bb-link-preview-url { font-size: .7rem; color: var(--zc-primary); margin-top: .35rem; }
+
+/* ─── BB DOCUMENT/FILE ─── */
+.bb-document-wrap { background: var(--zc-bg-secondary); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: .85rem 1.25rem; display: flex; align-items: center; gap: .85rem; margin-top: .75rem; }
+.bb-document-icon { width: 40px; height: 40px; background: var(--zc-primary); border-radius: var(--zc-radius-md); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; flex-shrink: 0; }
+.bb-document-name { font-weight: 600; font-size: .88rem; color: var(--zc-text-strong); }
+.bb-document-size { font-size: .72rem; color: var(--zc-text-muted); }
+.bb-document-download { margin-left: auto; background: transparent; border: 1px solid var(--zc-border); border-radius: var(--zc-radius-md); padding: .4rem .8rem; font-size: .78rem; color: var(--zc-text-muted); cursor: pointer; transition: all var(--zc-transition); text-decoration: none; }
+.bb-document-download:hover { border-color: var(--zc-primary); color: var(--zc-primary); }
+
+/* ─── BB MEDIA GRID ─── */
+.bb-activity-media-grid { display: grid; gap: 3px; border-radius: var(--zc-radius-lg); overflow: hidden; }
+.bb-activity-media-grid.count-1 { grid-template-columns: 1fr; }
+.bb-activity-media-grid.count-2 { grid-template-columns: 1fr 1fr; }
+.bb-activity-media-grid.count-3 { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
+.bb-activity-media-grid.count-3 .bb-media-item:first-child { grid-row: span 2; }
+.bb-activity-media-grid.count-4 { grid-template-columns: 1fr 1fr; }
+.bb-media-item { overflow: hidden; position: relative; aspect-ratio: 1; cursor: pointer; }
+.bb-media-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+.bb-media-item:hover img { transform: scale(1.04); }
+.bb-media-more-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #fff; }
+
+/* ─── BB VOICE MESSAGE ─── */
+.bb-voice-message { background: var(--zc-bg-secondary); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-pill); padding: .6rem 1rem; display: flex; align-items: center; gap: .75rem; margin-top: .75rem; }
+.bb-voice-play-btn { width: 34px; height: 34px; background: var(--zc-gradient); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; cursor: pointer; flex-shrink: 0; }
+.bb-voice-waveform { flex: 1; height: 28px; background: linear-gradient(to right,var(--zc-primary),var(--zc-secondary)); border-radius: 4px; opacity: .5; }
+.bb-voice-duration { font-size: .72rem; color: var(--zc-text-muted); flex-shrink: 0; }
+
+/* ─── BB NOTIFICATIONS ─── */
+.bb-notifications-list { list-style: none; margin: 0; padding: 0; }
+.bb-notification-item { display: flex; align-items: center; gap: .85rem; padding: .85rem 1rem; border-bottom: 1px solid var(--zc-border); transition: background var(--zc-transition); cursor: pointer; }
+.bb-notification-item:hover { background: var(--zc-bg-secondary); }
+.bb-notification-item.unread { background: rgba(124,111,247,.05); }
+.bb-notification-item.unread::before { content: ''; width: 8px; height: 8px; background: var(--zc-primary); border-radius: 50%; flex-shrink: 0; }
+.bb-notification-avatar img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.bb-notification-text { flex: 1; font-size: .85rem; line-height: 1.4; }
+.bb-notification-text strong { color: var(--zc-text-strong); }
+.bb-notification-time { font-size: .7rem; color: var(--zc-text-muted); flex-shrink: 0; }
+
+/* ─── BB FRIENDS ─── */
+.bb-friends-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: .75rem; }
+.bb-friend-item { display: flex; flex-direction: column; align-items: center; gap: .35rem; text-align: center; }
+.bb-friend-item img { width: 52px; height: 52px; border-radius: 50%; border: 2px solid var(--zc-border); object-fit: cover; }
+.bb-friend-item span { font-size: .7rem; color: var(--zc-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 80px; }
+.bb-friend-item a { text-decoration: none; }
+.bb-friend-item:hover img { border-color: var(--zc-primary); }
+
+/* ─── BB SEARCH ─── */
+.bb-search-container { position: relative; }
+.bb-search-results { position: absolute; top: calc(100% + 4px); left: 0; right: 0; background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); box-shadow: var(--zc-shadow-lg); z-index: 500; max-height: 400px; overflow-y: auto; }
+.bb-search-result-item { display: flex; align-items: center; gap: .75rem; padding: .75rem 1rem; border-bottom: 1px solid var(--zc-border); cursor: pointer; transition: background var(--zc-transition); text-decoration: none; }
+.bb-search-result-item:hover { background: var(--zc-bg-secondary); }
+.bb-search-result-item:last-child { border-bottom: none; }
+.bb-search-result-item img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+.bb-search-result-name { font-weight: 600; font-size: .85rem; color: var(--zc-text-strong); }
+.bb-search-result-type { font-size: .7rem; color: var(--zc-text-muted); }

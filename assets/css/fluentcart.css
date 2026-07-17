@@ -1,0 +1,20 @@
+/**
+ * ZinCelestial v3.0 — FluentCart Styles
+ */
+.fluent-cart-wrap { font-family: var(--zc-font-body); color: var(--zc-text); }
+.fluent-cart-product-card { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-xl); overflow: hidden; transition: transform var(--zc-transition), box-shadow var(--zc-transition); }
+.fluent-cart-product-card:hover { transform: translateY(-3px); box-shadow: var(--zc-shadow-md); }
+.fluent-cart-product-card .product-image { aspect-ratio: 4/3; overflow: hidden; }
+.fluent-cart-product-card .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.fluent-cart-product-card:hover .product-image img { transform: scale(1.04); }
+.fluent-cart-product-card .product-info { padding: 1.25rem; }
+.fluent-cart-product-card .product-title { font-weight: 700; font-size: .95rem; color: var(--zc-text-strong); margin-bottom: .4rem; }
+.fluent-cart-product-card .product-price { font-size: 1.1rem; font-weight: 800; color: var(--zc-primary); }
+.fluent-cart-product-card .product-old-price { text-decoration: line-through; color: var(--zc-text-muted); font-size: .82rem; }
+.fluent-cart-btn { background: var(--zc-gradient); color: #fff; border: none; border-radius: var(--zc-radius-pill); padding: .6rem 1.4rem; font-weight: 700; cursor: pointer; width: 100%; margin-top: .75rem; font-size: .88rem; transition: opacity var(--zc-transition); }
+.fluent-cart-btn:hover { opacity: .85; }
+.fluent-cart-checkout { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-xl); padding: 2rem; }
+.fluent-cart-order-summary { background: var(--zc-bg-secondary); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: 1.5rem; }
+.fluent-cart-order-row { display: flex; justify-content: space-between; padding: .5rem 0; border-bottom: 1px solid var(--zc-border); font-size: .88rem; color: var(--zc-text); }
+.fluent-cart-order-row:last-child { border-bottom: none; font-weight: 700; font-size: 1rem; color: var(--zc-text-strong); }
+.fluent-cart-order-row .label { color: var(--zc-text-muted); }

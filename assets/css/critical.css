@@ -1,0 +1,148 @@
+/**
+ * ZinCelestial v3.0 — Critical CSS (inlined in <head>)
+ * Above-the-fold styles only — prevents render blocking on first load
+ */
+
+/* ─── RESET & BASE ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--zc-font-body, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: var(--zc-font-size-base, 15px);
+  line-height: 1.6;
+  color: var(--zc-text, #e2e8f0);
+  background: var(--zc-bg, #07070f);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── COLOR TOKENS (Dark Mode Defaults) ─────────────── */
+:root {
+  --zc-primary:       #7c6ff7;
+  --zc-secondary:     #00d4ff;
+  --zc-accent:        #a78bfa;
+  --zc-bg:            #07070f;
+  --zc-bg-secondary:  #0f0f1f;
+  --zc-bg-card:       #111128;
+  --zc-border:        #1e1e3a;
+  --zc-text:          #e2e8f0;
+  --zc-text-muted:    #64748b;
+  --zc-text-strong:   #f1f5f9;
+  --zc-header-bg:     #0a0a18;
+  --zc-header-height: 70px;
+  --zc-topbar-height: 40px;
+  --zc-radius-sm:     4px;
+  --zc-radius-md:     8px;
+  --zc-radius-lg:     12px;
+  --zc-radius-xl:     16px;
+  --zc-radius-pill:   9999px;
+  --zc-shadow-sm:     0 2px 8px rgba(0,0,0,0.3);
+  --zc-shadow-md:     0 4px 16px rgba(0,0,0,0.4);
+  --zc-shadow-lg:     0 8px 32px rgba(0,0,0,0.5);
+  --zc-font-body:     'Inter', 'Segoe UI', sans-serif;
+  --zc-font-heading:  'Inter', 'Segoe UI', sans-serif;
+  --zc-font-display:  'Inter', 'Segoe UI', sans-serif;
+  --zc-font-mono:     'JetBrains Mono', 'Courier New', monospace;
+  --zc-font-size-base: 15px;
+  --zc-transition:    200ms ease;
+  --zc-gradient:      linear-gradient(135deg, var(--zc-primary), var(--zc-secondary));
+}
+
+/* ─── FOUC PREVENTION ───────────────────────────────── */
+.zc-fouc-hide { visibility: hidden !important; }
+
+/* ─── LAYOUT SCAFFOLD ───────────────────────────────── */
+#page, .site { display: flex; flex-direction: column; min-height: 100vh; }
+.site-content, #content { flex: 1 0 auto; }
+
+.container, .zc-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  width: 100%;
+}
+
+/* ─── HEADER CRITICAL ───────────────────────────────── */
+#masthead, .site-header, .zc-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--zc-header-bg);
+  border-bottom: 1px solid var(--zc-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  height: var(--zc-header-height);
+  display: flex;
+  align-items: center;
+}
+
+/* ─── TOPBAR CRITICAL ───────────────────────────────── */
+#zc-topbar, .zc-topbar {
+  background: rgba(7,7,15,.95);
+  border-bottom: 1px solid var(--zc-border);
+  height: var(--zc-topbar-height);
+  display: flex;
+  align-items: center;
+}
+
+/* ─── NAVIGATION CRITICAL ───────────────────────────── */
+nav, .main-navigation { display: flex; align-items: center; }
+.main-navigation ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 0; }
+
+/* ─── LOGO ──────────────────────────────────────────── */
+.site-branding, .zc-branding {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.site-title a { color: var(--zc-text-strong); text-decoration: none; font-weight: 800; font-size: 1.3rem; }
+.custom-logo { height: 40px; width: auto; max-width: 160px; object-fit: contain; }
+
+/* ─── LOADING SKELETON ──────────────────────────────── */
+@keyframes zc-skeleton {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.zc-skeleton {
+  background: linear-gradient(90deg, var(--zc-bg-secondary) 25%, var(--zc-border) 50%, var(--zc-bg-secondary) 75%);
+  background-size: 200% 100%;
+  animation: zc-skeleton 1.5s infinite;
+  border-radius: var(--zc-radius-md);
+}
+
+/* ─── HERO / PAGE HEADER ────────────────────────────── */
+.zc-page-header {
+  background: var(--zc-bg-secondary);
+  border-bottom: 1px solid var(--zc-border);
+  padding: 2rem 0;
+}
+.zc-page-header h1 { font-size: 1.75rem; font-weight: 800; color: var(--zc-text-strong); margin: 0; }
+
+/* ─── VISIBILITY HELPERS ────────────────────────────── */
+.screen-reader-text {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 9999; }
+.skip-link:focus { top: 1rem; background: var(--zc-primary); color: #fff; padding: .5rem 1rem; border-radius: var(--zc-radius-md); }
+
+/* ─── MEDIA ─────────────────────────────────────────── */
+img, video { max-width: 100%; height: auto; display: block; }
+img { loading: lazy; }
+
+/* ─── LINKS ─────────────────────────────────────────── */
+a { color: var(--zc-primary); text-decoration: none; transition: color var(--zc-transition); }
+a:hover { color: var(--zc-accent); }
+
+/* ─── RESPONSIVE ────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root { --zc-header-height: 60px; --zc-topbar-height: 0px; }
+  #zc-topbar { display: none; }
+}

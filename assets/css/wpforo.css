@@ -1,0 +1,29 @@
+/**
+ * ZinCelestial v3.0 — wpForo Forum Styles
+ */
+.wpforo-wrap { font-family: var(--zc-font-body) !important; color: var(--zc-text) !important; }
+.wpforo-board-wrap { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-xl); overflow: hidden; }
+.wpforo-cathead { background: var(--zc-bg-secondary); padding: .75rem 1.25rem; font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--zc-text-muted); font-weight: 700; border-bottom: 1px solid var(--zc-border); }
+.wpforo-forum-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid var(--zc-border); transition: background var(--zc-transition); }
+.wpforo-forum-item:last-child { border-bottom: none; }
+.wpforo-forum-item:hover { background: var(--zc-bg-secondary); }
+.wpforo-forum-icon { width: 42px; height: 42px; border-radius: var(--zc-radius-md); background: var(--zc-gradient); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; flex-shrink: 0; }
+.wpforo-forum-info { flex: 1; }
+.wpforo-forum-title a { font-weight: 700; font-size: .95rem; color: var(--zc-text-strong); text-decoration: none; }
+.wpforo-forum-title a:hover { color: var(--zc-primary); }
+.wpforo-forum-desc { font-size: .78rem; color: var(--zc-text-muted); margin-top: .2rem; }
+.wpforo-forum-stats { display: flex; gap: 1.5rem; font-size: .72rem; color: var(--zc-text-muted); flex-shrink: 0; }
+.wpforo-forum-stats span { display: flex; flex-direction: column; align-items: center; }
+.wpforo-forum-stats strong { font-size: .88rem; font-weight: 700; color: var(--zc-text-strong); }
+.wpforo-topic-item { display: flex; align-items: center; gap: .85rem; padding: .85rem 1.25rem; border-bottom: 1px solid var(--zc-border); transition: background var(--zc-transition); }
+.wpforo-topic-item:hover { background: var(--zc-bg-secondary); }
+.wpforo-topic-avatar img { width: 38px; height: 38px; border-radius: 50%; }
+.wpforo-topic-title a { font-weight: 700; color: var(--zc-text-strong); text-decoration: none; font-size: .9rem; }
+.wpforo-topic-title a:hover { color: var(--zc-primary); }
+.wpforo-post-body { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: 1.25rem; margin-bottom: 1rem; }
+.wpforo-post-head { display: flex; align-items: center; gap: .75rem; margin-bottom: .85rem; padding-bottom: .75rem; border-bottom: 1px solid var(--zc-border); }
+.wpforo-post-head img { width: 40px; height: 40px; border-radius: 50%; }
+.wpforo-post-content { font-size: .9rem; line-height: 1.7; color: var(--zc-text); }
+.wpforo-reply-form textarea { width: 100%; background: var(--zc-bg-secondary); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: .75rem 1rem; color: var(--zc-text); font-size: .88rem; min-height: 120px; resize: vertical; outline: none; font-family: inherit; }
+.wpforo-reply-form textarea:focus { border-color: var(--zc-primary); }
+.wpforo-btn-primary { background: var(--zc-gradient); color: #fff; border: none; border-radius: var(--zc-radius-pill); padding: .65rem 1.5rem; font-weight: 700; cursor: pointer; }

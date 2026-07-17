@@ -1,0 +1,528 @@
+/*
+ * ZinCelestial v5.2.0 — BuddyPress Styles
+ * Bootstrap 5.3 + BuddyPress Nouveau/Legacy compatibility
+ */
+
+/* ═══════════════════════════════════════════════════════════════
+   BP PAGE WRAPPER
+═══════════════════════════════════════════════════════════════ */
+.zc-bp-page { min-height: 60vh; }
+
+/* ── BP content area ── */
+#buddypress { max-width: 100%; }
+#buddypress .activity-list,
+#buddypress .members-list,
+#buddypress .groups-list { margin: 0; padding: 0; list-style: none; }
+
+/* ═══════════════════════════════════════════════════════════════
+   MEMBER DIRECTORY — BS5 CARD GRID
+═══════════════════════════════════════════════════════════════ */
+#buddypress #members-dir-list .members-list,
+#buddypress .members-loop { display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; }
+
+#buddypress #members-dir-list li.member-item,
+#buddypress .members-loop li {
+  flex: 0 0 calc(33.333% - 1rem);
+  min-width: 220px;
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  border-radius: var(--zc-radius-lg);
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+  list-style: none;
+  transition: box-shadow var(--zc-trans-base), transform var(--zc-trans-base);
+  position: relative;
+}
+#buddypress #members-dir-list li.member-item:hover,
+#buddypress .members-loop li:hover {
+  box-shadow: var(--zc-shadow-md);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 991px) {
+  #buddypress #members-dir-list li.member-item { flex: 0 0 calc(50% - .75rem); }
+}
+@media (max-width: 575px) {
+  #buddypress #members-dir-list li.member-item { flex: 0 0 100%; }
+}
+
+/* Member avatar */
+#buddypress .member-avatar a,
+#buddypress .item-avatar a { display: inline-block; margin-bottom: .75rem; }
+#buddypress .member-avatar img,
+#buddypress .item-avatar img {
+  width: var(--zc-bp-avatar-size, 80px);
+  height: var(--zc-bp-avatar-size, 80px);
+  border-radius: var(--zc-bp-avatar-radius, 50%);
+  object-fit: cover;
+  border: 3px solid var(--zc-border-2);
+  transition: border-color var(--zc-trans-fast);
+  box-shadow: var(--zc-shadow-sm);
+}
+#buddypress #members-dir-list li.member-item:hover .member-avatar img {
+  border-color: var(--zc-primary);
+}
+
+/* Member name */
+#buddypress .member-name a,
+#buddypress .item-title a {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--zc-text);
+  display: block;
+}
+#buddypress .member-name a:hover,
+#buddypress .item-title a:hover { color: var(--zc-primary); }
+
+/* Activity */
+#buddypress .member-since,
+#buddypress .activity { font-size: .75rem; color: var(--zc-text-dim); margin: .25rem 0 .75rem; }
+
+/* Action buttons */
+#buddypress .action { margin-top: .75rem; display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; }
+#buddypress .action a,
+#buddypress .action button {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .35rem .85rem;
+  border-radius: var(--zc-radius-md);
+  font-size: .8rem;
+  font-weight: 600;
+  border: 1px solid var(--zc-primary);
+  color: var(--zc-primary);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--zc-trans-fast);
+  text-decoration: none;
+}
+#buddypress .action a:hover,
+#buddypress .action button:hover {
+  background: var(--zc-primary);
+  color: #fff;
+}
+
+/* Friend / message buttons */
+.zc-friend-btn { }
+.zc-msg-btn { border-color: var(--zc-secondary) !important; color: var(--zc-secondary) !important; }
+.zc-msg-btn:hover { background: var(--zc-secondary) !important; color: #fff !important; }
+
+/* ═══════════════════════════════════════════════════════════════
+   ACTIVITY FEED
+═══════════════════════════════════════════════════════════════ */
+#buddypress #activity-stream { margin: 0; padding: 0; list-style: none; }
+
+#buddypress #activity-stream li.activity-item {
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  border-radius: var(--zc-radius-lg);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  list-style: none;
+  transition: box-shadow var(--zc-trans-base);
+}
+#buddypress #activity-stream li.activity-item:hover { box-shadow: var(--zc-shadow-md); }
+
+#buddypress .activity-content { padding: 1rem 1.25rem; }
+
+/* Activity header (avatar + user + time) */
+#buddypress .activity-header { display: flex; align-items: flex-start; gap: .75rem; margin-bottom: .75rem; }
+#buddypress .activity-header img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--zc-border-2);
+  flex-shrink: 0;
+}
+#buddypress .activity-header p { margin: 0; font-size: .875rem; }
+#buddypress .activity-header a { color: var(--zc-primary); font-weight: 600; }
+#buddypress .activity-header .time-since { font-size: .75rem; color: var(--zc-text-dim); margin-top: .2rem; }
+
+/* Activity text */
+#buddypress .activity-inner { font-size: .9rem; color: var(--zc-text); line-height: 1.6; }
+#buddypress .activity-inner img { border-radius: var(--zc-radius-md); max-height: 400px; object-fit: cover; width: 100%; }
+
+/* Activity actions (Like, Comment, etc.) */
+#buddypress .activity-meta {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .6rem 1.25rem;
+  border-top: 1px solid var(--zc-border);
+  background: rgba(255,255,255,.02);
+}
+#buddypress .activity-meta a {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--zc-text-muted);
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  transition: color var(--zc-trans-fast);
+}
+#buddypress .activity-meta a:hover { color: var(--zc-primary); }
+#buddypress .activity-meta a.favorited { color: var(--zc-warning); }
+
+/* Compose / post activity */
+#buddypress #whats-new-form {
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  border-radius: var(--zc-radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+#buddypress #whats-new {
+  width: 100%;
+  background: var(--zc-bg-card-2);
+  border: 1px solid var(--zc-border-2);
+  border-radius: var(--zc-radius-md);
+  color: var(--zc-text);
+  padding: .75rem;
+  font-size: .9rem;
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color var(--zc-trans-fast);
+}
+#buddypress #whats-new:focus { outline: none; border-color: var(--zc-primary); }
+#buddypress #aw-whats-new-submit { margin-top: .75rem; }
+#buddypress #aw-whats-new-submit input[type="submit"] {
+  background: var(--zc-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--zc-radius-md);
+  padding: .5rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--zc-trans-fast);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GROUPS DIRECTORY
+═══════════════════════════════════════════════════════════════ */
+#buddypress #groups-dir-list .groups-list { display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; }
+#buddypress #groups-dir-list li.group-item {
+  flex: 0 0 calc(33.333% - 1rem);
+  min-width: 220px;
+  list-style: none;
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  border-radius: var(--zc-radius-lg);
+  overflow: hidden;
+  transition: box-shadow var(--zc-trans-base), transform var(--zc-trans-base);
+}
+#buddypress #groups-dir-list li.group-item:hover {
+  box-shadow: var(--zc-shadow-md);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 991px) { #buddypress #groups-dir-list li.group-item { flex: 0 0 calc(50% - .75rem); } }
+@media (max-width: 575px) { #buddypress #groups-dir-list li.group-item { flex: 0 0 100%; } }
+
+#buddypress .group-avatar img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+#buddypress .group-item .item { padding: 1rem; }
+#buddypress .group-item .item-title a { font-weight: 700; color: var(--zc-text); }
+#buddypress .group-item .item-title a:hover { color: var(--zc-primary); }
+#buddypress .group-item .item-meta { font-size: .78rem; color: var(--zc-text-dim); margin: .25rem 0; }
+#buddypress .group-item .action { padding: .5rem 1rem 1rem; }
+
+/* ═══════════════════════════════════════════════════════════════
+   MEMBER PROFILE / HEADER
+═══════════════════════════════════════════════════════════════ */
+#buddypress #item-header {
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  border-radius: var(--zc-radius-lg);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+/* Cover photo area */
+#buddypress #header-cover-image {
+  height: var(--zc-bp-cover-h, 200px);
+  background: linear-gradient(135deg, var(--zc-primary), var(--zc-secondary));
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+#buddypress #item-header-content {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-end;
+  padding: 0 1.5rem 1.25rem;
+  margin-top: -44px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+#buddypress #item-header-avatar img {
+  width: 88px;
+  height: 88px;
+  border-radius: var(--zc-bp-avatar-radius, 50%);
+  border: 3px solid var(--zc-bg-card);
+  object-fit: cover;
+  box-shadow: var(--zc-shadow-md);
+}
+
+#buddypress #item-header-meta { flex: 1; min-width: 200px; }
+#buddypress #item-header-meta h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: .2rem; }
+#buddypress #item-header-meta .activity { font-size: .8rem; color: var(--zc-text-dim); }
+
+/* Profile nav tabs */
+#buddypress #object-nav ul {
+  display: flex;
+  gap: .25rem;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: .5rem 1rem;
+  border-top: 1px solid var(--zc-border);
+  background: rgba(255,255,255,.02);
+}
+#buddypress #object-nav ul li { list-style: none; }
+#buddypress #object-nav ul li a {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .4rem .9rem;
+  border-radius: var(--zc-radius-md);
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--zc-text-muted);
+  transition: all var(--zc-trans-fast);
+}
+#buddypress #object-nav ul li a:hover {
+  background: rgba(124,111,247,.1);
+  color: var(--zc-primary);
+}
+#buddypress #object-nav ul li.current a {
+  background: var(--zc-primary);
+  color: #fff;
+}
+#buddypress #object-nav ul li span.count {
+  background: rgba(255,255,255,.15);
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: .7rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GROUP SINGLE HEADER
+═══════════════════════════════════════════════════════════════ */
+#buddypress #group-header {
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  border-radius: var(--zc-radius-lg);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BP DIRECTORY FILTERS / SEARCH
+═══════════════════════════════════════════════════════════════ */
+#buddypress .dir-search,
+#buddypress #subnav {
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+#buddypress .dir-search input[type="text"],
+#buddypress .dir-search input[type="search"] {
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border-2);
+  border-radius: var(--zc-radius-md);
+  color: var(--zc-text);
+  padding: .5rem .85rem;
+  font-size: .875rem;
+  flex: 1;
+  min-width: 200px;
+  transition: border-color var(--zc-trans-fast);
+}
+#buddypress .dir-search input:focus { outline: none; border-color: var(--zc-primary); }
+#buddypress .dir-search input[type="submit"],
+#buddypress #members_search_submit {
+  background: var(--zc-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--zc-radius-md);
+  padding: .5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: .875rem;
+}
+
+/* Filter tabs */
+#buddypress .item-list-tabs ul {
+  display: flex;
+  gap: .25rem;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+#buddypress .item-list-tabs ul li { list-style: none; }
+#buddypress .item-list-tabs ul li a {
+  display: inline-flex;
+  align-items: center;
+  padding: .35rem .85rem;
+  border-radius: var(--zc-radius-md);
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--zc-text-muted);
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  transition: all var(--zc-trans-fast);
+}
+#buddypress .item-list-tabs ul li a:hover {
+  border-color: var(--zc-primary);
+  color: var(--zc-primary);
+}
+#buddypress .item-list-tabs ul li.selected a,
+#buddypress .item-list-tabs ul li.current a {
+  background: var(--zc-primary);
+  border-color: var(--zc-primary);
+  color: #fff;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BP MESSAGES
+═══════════════════════════════════════════════════════════════ */
+#buddypress .message-box {
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  border-radius: var(--zc-radius-lg);
+  overflow: hidden;
+}
+#buddypress .message-metadata {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--zc-border);
+  background: rgba(255,255,255,.02);
+}
+#buddypress .message-content { padding: 1.25rem; }
+
+/* ═══════════════════════════════════════════════════════════════
+   BP NOTIFICATIONS
+═══════════════════════════════════════════════════════════════ */
+#buddypress #notifications-loop li {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--zc-border);
+  list-style: none;
+}
+#buddypress #notifications-loop li img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BP REGISTRATION FORM
+═══════════════════════════════════════════════════════════════ */
+#buddypress #register-page {
+  max-width: 520px;
+  margin: 2rem auto;
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  border-radius: var(--zc-radius-xl);
+  padding: 2rem;
+}
+#buddypress #register-page label { font-weight: 600; color: var(--zc-text); font-size: .875rem; }
+#buddypress #register-page input[type="text"],
+#buddypress #register-page input[type="email"],
+#buddypress #register-page input[type="password"] {
+  width: 100%;
+  background: var(--zc-bg-card-2);
+  border: 1px solid var(--zc-border-2);
+  border-radius: var(--zc-radius-md);
+  color: var(--zc-text);
+  padding: .55rem .85rem;
+  margin: .4rem 0 1rem;
+  font-size: .9rem;
+  transition: border-color var(--zc-trans-fast);
+}
+#buddypress #register-page input:focus { outline: none; border-color: var(--zc-primary); }
+#buddypress #register-page input[type="submit"] {
+  width: 100%;
+  background: var(--zc-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--zc-radius-md);
+  padding: .65rem;
+  font-weight: 700;
+  font-size: .95rem;
+  cursor: pointer;
+  transition: background var(--zc-trans-fast);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BP SETTINGS
+═══════════════════════════════════════════════════════════════ */
+#buddypress #settings-form {
+  background: var(--zc-bg-card);
+  border: 1px solid var(--zc-border);
+  border-radius: var(--zc-radius-lg);
+  padding: 1.5rem;
+}
+#buddypress .notification-settings td,
+#buddypress .notification-settings th {
+  padding: .6rem 1rem;
+  border-bottom: 1px solid var(--zc-border);
+  color: var(--zc-text);
+  font-size: .875rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BP MEMBER HEADER STATS (ZinCelestial native)
+═══════════════════════════════════════════════════════════════ */
+.zc-member-header-stats,
+.zc-group-header-stats { margin-top: .5rem; }
+
+/* ═══════════════════════════════════════════════════════════════
+   BP GENERAL UTILITY
+═══════════════════════════════════════════════════════════════ */
+#buddypress .info { font-size: .8rem; color: var(--zc-text-dim); }
+#buddypress .highlighted { background: rgba(124,111,247,.08); }
+
+/* BP no-members/no-groups empty state */
+#buddypress #members-dir-list .no-members,
+#buddypress #groups-dir-list .no-groups {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--zc-text-muted);
+  font-size: 1rem;
+}
+
+/* Load more */
+#buddypress .load-more a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem 1.5rem;
+  border: 1px solid var(--zc-primary);
+  border-radius: var(--zc-radius-md);
+  color: var(--zc-primary);
+  font-weight: 600;
+  font-size: .875rem;
+  transition: all var(--zc-trans-fast);
+  margin: 1.5rem auto;
+  text-align: center;
+  display: flex;
+  width: fit-content;
+}
+#buddypress .load-more a:hover {
+  background: var(--zc-primary);
+  color: #fff;
+}

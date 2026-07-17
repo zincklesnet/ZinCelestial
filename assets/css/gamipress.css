@@ -1,0 +1,29 @@
+/* ZinCelestial — GamiPress Header Bar */
+.zc-gamipress-bar{display:flex;align-items:center;gap:var(--zc-space-4);background:var(--zc-card);border-bottom:1px solid var(--zc-border);padding:0 var(--zc-space-6);height:44px;overflow-x:auto;scrollbar-width:none;position:relative;z-index:90}
+.zc-gamipress-bar::-webkit-scrollbar{display:none}
+.zc-gp-bar__avatar{flex-shrink:0}
+.zc-gp-bar__avatar-img{width:36px;height:36px;border-radius:var(--zc-radius-full);border:2px solid var(--zc-primary);object-fit:cover}
+.zc-gp-bar__item{display:flex;align-items:center;gap:var(--zc-space-2);flex-shrink:0;padding:0 var(--zc-space-3);border-right:1px solid var(--zc-border);height:100%}
+.zc-gp-bar__item:last-child{border-right:none}
+.zc-gp-bar__icon{font-size:1rem;line-height:1;flex-shrink:0}
+.zc-gp-bar__value{font-size:var(--zc-fs-sm);font-weight:700;color:var(--zc-text);font-family:var(--zc-font-display)}
+.zc-gp-bar__label{font-size:var(--zc-fs-xs);color:var(--zc-text-faint);text-transform:uppercase;letter-spacing:.06em}
+/* XP Track */
+.zc-gp-bar__xp{min-width:140px}
+.zc-xp-track{width:100px;height:6px;background:var(--zc-border);border-radius:var(--zc-radius-full);overflow:hidden;position:relative}
+.zc-xp-fill{position:absolute;left:0;top:0;height:100%;background:var(--zc-gradient-primary);border-radius:var(--zc-radius-full);transition:width .6s ease}
+/* Hover tooltips on bar items */
+.zc-gp-bar__item{position:relative;cursor:default}
+.zc-gp-bar__item::after{content:attr(title);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--zc-surface);border:1px solid var(--zc-border);border-radius:var(--zc-radius-sm);padding:.3em .7em;font-size:var(--zc-fs-xs);white-space:nowrap;color:var(--zc-text);box-shadow:var(--zc-shadow-md);opacity:0;visibility:hidden;pointer-events:none;transition:all var(--zc-transition-fast);z-index:500}
+.zc-gp-bar__item:hover::after{opacity:1;visibility:visible}
+/* Rank label */
+.zc-gp-bar__rank .zc-gp-bar__value{background:var(--zc-gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* Mobile: collapse bar */
+@media(max-width:600px){
+  .zc-gamipress-bar{gap:var(--zc-space-2);padding:0 var(--zc-space-3)}
+  .zc-gp-bar__label,.zc-gp-bar__xp .zc-gp-bar__value{display:none}
+  .zc-xp-track{width:60px}
+}
+/* BP member header gamipress bar */
+.zc-bp-gamipress-bar{padding:var(--zc-space-3) 0}
+.zc-bp-gamipress-bar .zc-gamipress-bar{border:1px solid var(--zc-border);border-radius:var(--zc-radius-lg);height:auto;padding:var(--zc-space-3) var(--zc-space-5)}

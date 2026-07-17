@@ -1,0 +1,231 @@
+/*
+ * ZinCelestial Bootstrap 5 Bridge
+ * Maps --bs-* variables to --zc-* design tokens
+ * Loaded after Bootstrap CSS, before core.css
+ */
+:root {
+  /* ── Color bridge ── */
+  --bs-primary:         var(--zc-primary,       #7c6ff7);
+  --bs-primary-rgb:     124, 111, 247;
+  --bs-secondary:       var(--zc-secondary,     #00d4ff);
+  --bs-secondary-rgb:   0, 212, 255;
+  --bs-success:         var(--zc-success,       #34d399);
+  --bs-success-rgb:     52, 211, 153;
+  --bs-warning:         var(--zc-warning,       #fbbf24);
+  --bs-warning-rgb:     251, 191, 36;
+  --bs-danger:          var(--zc-danger,        #f87171);
+  --bs-danger-rgb:      248, 113, 113;
+  --bs-info:            var(--zc-info,          #38bdf8);
+  --bs-info-rgb:        56, 189, 248;
+  --bs-light:           var(--zc-card,          #161626);
+  --bs-dark:            var(--zc-surface,       #0f0f1f);
+
+  /* ── Body ── */
+  --bs-body-bg:         var(--zc-bg,            #07070f);
+  --bs-body-color:      var(--zc-text,          #e2e8f0);
+  --bs-secondary-color: var(--zc-text-muted,    #94a3b8);
+  --bs-tertiary-color:  var(--zc-text-faint,    #64748b);
+  --bs-secondary-bg:    var(--zc-surface,       #0f0f1f);
+  --bs-tertiary-bg:     var(--zc-card,          #161626);
+
+  /* ── Typography ── */
+  --bs-font-sans-serif: var(--zc-font-body,     'Inter', system-ui, sans-serif);
+  --bs-font-monospace:  var(--zc-font-mono,     'JetBrains Mono', monospace);
+  --bs-body-font-size:  var(--zc-fs-md,         1rem);
+  --bs-body-line-height:var(--zc-lh,            1.7);
+
+  /* ── Border ── */
+  --bs-border-color:    var(--zc-border,        #1e1e3a);
+  --bs-border-color-translucent: rgba(255,255,255,.08);
+  --bs-border-radius:   var(--zc-radius-md,     12px);
+  --bs-border-radius-sm:var(--zc-radius-sm,     6px);
+  --bs-border-radius-lg:var(--zc-radius-lg,     16px);
+  --bs-border-radius-xl:var(--zc-radius-xl,     24px);
+  --bs-border-radius-2xl: 32px;
+  --bs-border-radius-pill: var(--zc-radius-full, 9999px);
+
+  /* ── Card ── */
+  --bs-card-bg:         var(--zc-card,          #161626);
+  --bs-card-border-color: var(--zc-border,      #1e1e3a);
+  --bs-card-cap-bg:     var(--zc-surface,       #0f0f1f);
+  --bs-card-cap-color:  var(--zc-text,          #e2e8f0);
+
+  /* ── Nav ── */
+  --bs-nav-link-color:  var(--zc-text-muted,    #94a3b8);
+  --bs-nav-link-hover-color: var(--zc-primary,  #7c6ff7);
+  --bs-nav-tabs-border-color: var(--zc-border,  #1e1e3a);
+
+  /* ── Navbar ── */
+  --bs-navbar-color:    var(--zc-text,          #e2e8f0);
+  --bs-navbar-active-color: var(--zc-primary,   #7c6ff7);
+  --bs-navbar-brand-color: var(--zc-text,       #e2e8f0);
+  --bs-navbar-toggler-border-color: var(--zc-border, #1e1e3a);
+
+  /* ── Dropdown ── */
+  --bs-dropdown-bg:     var(--zc-card,          #161626);
+  --bs-dropdown-border-color: var(--zc-border,  #1e1e3a);
+  --bs-dropdown-link-color: var(--zc-text,      #e2e8f0);
+  --bs-dropdown-link-hover-color: var(--zc-primary, #7c6ff7);
+  --bs-dropdown-link-hover-bg: rgba(124,111,247,.1);
+  --bs-dropdown-link-active-bg: var(--zc-primary, #7c6ff7);
+
+  /* ── Modal ── */
+  --bs-modal-bg:        var(--zc-surface,       #0f0f1f);
+  --bs-modal-border-color: var(--zc-border,     #1e1e3a);
+  --bs-modal-header-border-color: var(--zc-border, #1e1e3a);
+  --bs-modal-footer-border-color: var(--zc-border, #1e1e3a);
+
+  /* ── Form ── */
+  --bs-form-control-bg: var(--zc-card,          #161626);
+  --bs-form-control-border-color: var(--zc-border, #1e1e3a);
+  --bs-form-control-color: var(--zc-text,       #e2e8f0);
+  --bs-input-bg:        var(--zc-card,          #161626);
+  --bs-input-border-color: var(--zc-border,     #1e1e3a);
+  --bs-input-color:     var(--zc-text,          #e2e8f0);
+  --bs-input-focus-border-color: var(--zc-primary, #7c6ff7);
+  --bs-input-placeholder-color: var(--zc-text-faint, #64748b);
+
+  /* ── Table ── */
+  --bs-table-bg:        transparent;
+  --bs-table-striped-bg: rgba(255,255,255,.03);
+  --bs-table-hover-bg:  rgba(124,111,247,.05);
+  --bs-table-border-color: var(--zc-border,     #1e1e3a);
+
+  /* ── Pagination ── */
+  --bs-pagination-bg:          var(--zc-card,   #161626);
+  --bs-pagination-border-color: var(--zc-border,#1e1e3a);
+  --bs-pagination-color:       var(--zc-text-muted, #94a3b8);
+  --bs-pagination-hover-color: var(--zc-primary,#7c6ff7);
+  --bs-pagination-hover-bg:    rgba(124,111,247,.1);
+  --bs-pagination-active-bg:   var(--zc-primary, #7c6ff7);
+  --bs-pagination-active-border-color: var(--zc-primary, #7c6ff7);
+
+  /* ── Alert ── */
+  --bs-alert-bg:        var(--zc-card,          #161626);
+  --bs-alert-border-color: var(--zc-border,     #1e1e3a);
+
+  /* ── Badge ── */
+  --bs-badge-font-size:  0.78em;
+  --bs-badge-font-weight: 600;
+  --bs-badge-border-radius: var(--zc-radius-full, 9999px);
+
+  /* ── Toast ── */
+  --bs-toast-bg:        var(--zc-surface,       #0f0f1f);
+  --bs-toast-border-color: var(--zc-border,     #1e1e3a);
+  --bs-toast-color:     var(--zc-text,          #e2e8f0);
+
+  /* ── Offcanvas ── */
+  --bs-offcanvas-bg:    var(--zc-surface,       #0f0f1f);
+  --bs-offcanvas-border-color: var(--zc-border, #1e1e3a);
+  --bs-offcanvas-color: var(--zc-text,          #e2e8f0);
+
+  /* ── Accordion ── */
+  --bs-accordion-bg:    var(--zc-card,          #161626);
+  --bs-accordion-border-color: var(--zc-border, #1e1e3a);
+  --bs-accordion-btn-color: var(--zc-text,      #e2e8f0);
+  --bs-accordion-btn-icon-color: var(--zc-text-muted, #94a3b8);
+  --bs-accordion-active-color: var(--zc-primary, #7c6ff7);
+  --bs-accordion-active-bg:    rgba(124,111,247,.08);
+
+  /* ── List group ── */
+  --bs-list-group-bg:   var(--zc-card,          #161626);
+  --bs-list-group-border-color: var(--zc-border,#1e1e3a);
+  --bs-list-group-color: var(--zc-text,         #e2e8f0);
+  --bs-list-group-action-hover-color: var(--zc-primary, #7c6ff7);
+  --bs-list-group-action-hover-bg: rgba(124,111,247,.08);
+  --bs-list-group-active-bg: var(--zc-primary,  #7c6ff7);
+  --bs-list-group-active-border-color: var(--zc-primary, #7c6ff7);
+
+  /* ── Progress ── */
+  --bs-progress-bg:     var(--zc-border,        #1e1e3a);
+  --bs-progress-bar-bg: var(--zc-primary,       #7c6ff7);
+  --bs-progress-height: 8px;
+  --bs-progress-border-radius: var(--zc-radius-full, 9999px);
+
+  /* ── Placeholder (skeleton) ── */
+  --bs-placeholder-opacity-max: 0.14;
+  --bs-placeholder-opacity-min: 0.05;
+
+  /* ── Link ── */
+  --bs-link-color:      var(--zc-primary,       #7c6ff7);
+  --bs-link-hover-color:var(--zc-primary-light, #9d93f9);
+
+  /* ── Code ── */
+  --bs-code-color:      var(--zc-secondary,     #00d4ff);
+
+  /* ── Focus ring ── */
+  --bs-focus-ring-color: rgba(124, 111, 247, 0.4);
+  --bs-focus-ring-width: 3px;
+}
+
+/* Light mode overrides — when .zc-mode-light is on <html> */
+html.zc-mode-light {
+  --bs-body-bg:          #f4f6fb;
+  --bs-body-color:       #1a1a2e;
+  --bs-secondary-bg:     #ffffff;
+  --bs-tertiary-bg:      #f8f9fc;
+  --bs-border-color:     #dde1f0;
+  --bs-card-bg:          #ffffff;
+  --bs-input-bg:         #ffffff;
+  --bs-input-border-color: #dde1f0;
+  --bs-modal-bg:         #ffffff;
+  --bs-dropdown-bg:      #ffffff;
+  --bs-toast-bg:         #ffffff;
+  --bs-offcanvas-bg:     #ffffff;
+  --bs-accordion-bg:     #ffffff;
+  --bs-list-group-bg:    #ffffff;
+  --bs-progress-bg:      #e8ecf5;
+}
+
+/* Bootstrap component style overrides to match ZinCelestial aesthetic */
+
+/* Buttons */
+.btn { font-weight: 600; letter-spacing: .01em; transition: all .2s ease; }
+.btn:focus-visible { box-shadow: 0 0 0 var(--bs-focus-ring-width) var(--bs-focus-ring-color); }
+.btn-primary { background: var(--zc-primary); border-color: var(--zc-primary); }
+.btn-primary:hover { background: var(--zc-primary-light); border-color: var(--zc-primary-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(124,111,247,.35); }
+.btn-outline-primary { color: var(--zc-primary); border-color: var(--zc-primary); }
+.btn-outline-primary:hover { background: var(--zc-primary); border-color: var(--zc-primary); transform: translateY(-1px); }
+
+/* Cards */
+.card { border-color: var(--bs-card-border-color); transition: transform .2s, box-shadow .2s; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,.3); }
+
+/* Form controls */
+.form-control, .form-select {
+  background-color: var(--bs-input-bg);
+  border-color: var(--bs-input-border-color);
+  color: var(--bs-input-color);
+}
+.form-control:focus, .form-select:focus {
+  background-color: var(--bs-input-bg);
+  border-color: var(--bs-input-focus-border-color);
+  color: var(--bs-input-color);
+  box-shadow: 0 0 0 3px rgba(124,111,247,.2);
+}
+.form-control::placeholder { color: var(--bs-input-placeholder-color); }
+
+/* Navbar */
+.navbar { background-color: var(--zc-surface) !important; border-bottom: 1px solid var(--zc-border); }
+.nav-link { color: var(--bs-navbar-color) !important; border-radius: var(--zc-radius-sm); transition: all .15s; }
+.nav-link:hover, .nav-link:focus { color: var(--bs-navbar-active-color) !important; background: rgba(124,111,247,.08); }
+.navbar-toggler { border-color: var(--bs-navbar-toggler-border-color); }
+
+/* Dropdown */
+.dropdown-menu { animation: zc-dropdown-in .18s ease; }
+@keyframes zc-dropdown-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Offcanvas */
+.offcanvas { border-color: var(--bs-offcanvas-border-color); }
+
+/* Table */
+.table { --bs-table-color: var(--zc-text); }
+
+/* Badge */
+.badge { letter-spacing: .02em; }
+
+/* Alert */
+.alert { border-radius: var(--zc-radius-md); }

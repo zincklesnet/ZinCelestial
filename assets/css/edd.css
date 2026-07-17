@@ -1,0 +1,47 @@
+/**
+ * ZinCelestial v3.0 — Easy Digital Downloads Styles
+ */
+
+/* ─── DOWNLOADS GRID ─── */
+.edd-downloads-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+.edd_download { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-xl); overflow: hidden; transition: transform var(--zc-transition), box-shadow var(--zc-transition); }
+.edd_download:hover { transform: translateY(-3px); box-shadow: var(--zc-shadow-md); }
+.edd_download .edd-download-image { position: relative; aspect-ratio: 16/9; overflow: hidden; }
+.edd_download .edd-download-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.edd_download:hover .edd-download-image img { transform: scale(1.04); }
+
+/* ─── DOWNLOAD META ─── */
+.edd_download .edd-download-inner { padding: 1.25rem; }
+.edd_download h3.edd-title { font-size: 1rem; font-weight: 700; color: var(--zc-text-strong); margin: 0 0 .4rem; }
+.edd_download h3.edd-title a { color: inherit; text-decoration: none; }
+.edd_download h3.edd-title a:hover { color: var(--zc-primary); }
+.edd-short-description { font-size: .82rem; color: var(--zc-text-muted); line-height: 1.5; margin-bottom: 1rem; }
+
+/* ─── PRICE & CTA ─── */
+.edd_purchase_ajax_disabled, .edd-submit { display: inline-flex; align-items: center; gap: .5rem; background: var(--zc-gradient); color: #fff; border: none; border-radius: var(--zc-radius-pill); padding: .6rem 1.4rem; font-weight: 700; font-size: .85rem; cursor: pointer; text-decoration: none; transition: opacity var(--zc-transition), transform var(--zc-transition); }
+.edd-submit:hover { opacity: .85; transform: translateY(-1px); }
+.edd_price { font-size: 1.1rem; font-weight: 800; color: var(--zc-primary); }
+.edd_download_purchase_form { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+
+/* ─── SALE BADGE ─── */
+.edd-sale-badge { position: absolute; top: .75rem; right: .75rem; background: #ef4444; color: #fff; font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: .5px; padding: .2rem .55rem; border-radius: var(--zc-radius-pill); }
+
+/* ─── STATS ─── */
+.edd-download-stats { display: flex; gap: 1rem; font-size: .72rem; color: var(--zc-text-muted); margin-bottom: .75rem; flex-wrap: wrap; }
+.edd-download-stats span { display: flex; align-items: center; gap: .25rem; }
+
+/* ─── SINGLE DOWNLOAD ─── */
+.edd_purchase_message { background: #d1fae5; border: 1px solid #6ee7b7; color: #065f46; border-radius: var(--zc-radius-lg); padding: 1rem 1.25rem; margin: 1rem 0; }
+.edd_errors { background: #fee2e2; border: 1px solid #fca5a5; color: #991b1b; border-radius: var(--zc-radius-lg); padding: 1rem 1.25rem; margin: 1rem 0; }
+
+/* ─── CHECKOUT ─── */
+#edd_checkout_form_wrap { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-xl); padding: 2rem; }
+#edd_checkout_cart { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; }
+#edd_checkout_cart th { background: var(--zc-bg-secondary); padding: .6rem .85rem; font-size: .78rem; text-transform: uppercase; letter-spacing: .5px; color: var(--zc-text-muted); font-weight: 600; border-bottom: 1px solid var(--zc-border); }
+#edd_checkout_cart td { padding: .85rem; border-bottom: 1px solid var(--zc-border); vertical-align: middle; color: var(--zc-text); font-size: .88rem; }
+.edd-cart-item-title { font-weight: 700; color: var(--zc-text-strong); }
+.edd_cart_total_price { font-size: 1.1rem; font-weight: 800; color: var(--zc-primary); }
+#edd-purchase-button { width: 100%; padding: .85rem; font-size: 1rem; }
+
+/* ─── LICENSE KEY NOTICE ─── */
+.edd-license-notice { background: var(--zc-bg-secondary); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: 1rem 1.25rem; display: flex; align-items: center; gap: .75rem; font-size: .85rem; color: var(--zc-text-muted); margin-top: 1rem; }

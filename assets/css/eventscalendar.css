@@ -1,0 +1,40 @@
+/**
+ * ZinCelestial v3.0 — The Events Calendar Styles
+ */
+
+/* ─── CALENDAR GRID ─── */
+.tribe-events { font-family: var(--zc-font-body) !important; }
+.tribe-events-calendar { border-collapse: collapse; width: 100%; }
+.tribe-events-calendar th { background: var(--zc-bg-secondary); padding: .65rem .85rem; font-size: .75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--zc-text-muted); font-weight: 600; border: 1px solid var(--zc-border); }
+.tribe-events-calendar td { vertical-align: top; border: 1px solid var(--zc-border); padding: .5rem; min-height: 90px; background: var(--zc-bg-card); }
+.tribe-events-calendar td.tribe-events-past { background: var(--zc-bg-secondary); opacity: .6; }
+.tribe-events-calendar td.tribe-events-present { background: rgba(124,111,247,.06); border-color: var(--zc-primary); }
+.tribe-events-calendar .tribe-event-schedule-details { font-size: .72rem; }
+.tribe-events-calendar .tribe-events-month-grid-cell { padding: .3rem .5rem; }
+.tribe-events-calendar .tribe-event-url { display: block; background: var(--zc-primary); color: #fff; border-radius: 4px; padding: .15rem .4rem; font-size: .68rem; font-weight: 600; text-decoration: none; margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: opacity .15s; }
+.tribe-events-calendar .tribe-event-url:hover { opacity: .8; }
+
+/* ─── EVENT LIST ─── */
+.tribe-events-list { display: flex; flex-direction: column; gap: 1rem; }
+.tribe-events-list-event-wrap { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-lg); padding: 1.25rem 1.5rem; display: flex; gap: 1.25rem; transition: transform .15s, box-shadow .15s; }
+.tribe-events-list-event-wrap:hover { transform: translateY(-2px); box-shadow: var(--zc-shadow-md); }
+.tribe-event-featured-image { width: 120px; height: 90px; object-fit: cover; border-radius: var(--zc-radius-md); flex-shrink: 0; }
+.tribe-event-schedule-details { font-size: .82rem; color: var(--zc-primary); font-weight: 700; margin-bottom: .3rem; }
+.tribe-events-list-event-title { font-size: 1rem; font-weight: 700; color: var(--zc-text-strong); margin-bottom: .4rem; }
+.tribe-events-list-event-title a { color: inherit; text-decoration: none; }
+.tribe-events-list-event-title a:hover { color: var(--zc-primary); }
+.tribe-event-location { font-size: .78rem; color: var(--zc-text-muted); display: flex; align-items: center; gap: .25rem; }
+.tribe-events-read-more { background: var(--zc-gradient); color: #fff; border: none; border-radius: var(--zc-radius-pill); padding: .45rem 1.1rem; font-size: .78rem; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-block; margin-top: .5rem; }
+.tribe-events-read-more:hover { opacity: .85; color: #fff; }
+
+/* ─── SINGLE EVENT ─── */
+.tribe-events-single-section { background: var(--zc-bg-card); border: 1px solid var(--zc-border); border-radius: var(--zc-radius-xl); padding: 2rem; margin-bottom: 1.5rem; }
+.tribe-events-single-section h3 { font-size: .82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--zc-text-muted); margin-bottom: .75rem; }
+.tribe-venue { font-size: .88rem; color: var(--zc-text); }
+.tribe-events-single-url { display: inline-flex; align-items: center; gap: .4rem; background: var(--zc-gradient); color: #fff; border-radius: var(--zc-radius-pill); padding: .65rem 1.5rem; font-weight: 700; text-decoration: none; margin-top: 1rem; }
+.tribe-events-single-url:hover { opacity: .85; color: #fff; }
+
+/* ─── NAV ─── */
+.tribe-events-nav-pagination { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+.tribe-events-nav-pagination a { background: var(--zc-bg-secondary); border: 1px solid var(--zc-border); color: var(--zc-text); border-radius: var(--zc-radius-pill); padding: .5rem 1.1rem; font-size: .82rem; font-weight: 600; text-decoration: none; transition: all .15s; }
+.tribe-events-nav-pagination a:hover { background: var(--zc-primary); color: #fff; border-color: var(--zc-primary); }
